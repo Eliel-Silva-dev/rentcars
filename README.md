@@ -1,14 +1,14 @@
 # Projeto Rentcars
 
-Clone do site rentcars, locação de veiculos
+Clone do site Rentcars, locação de veículos.
+
+Este projeto tem como objetivo fornecer serviços de locação de veículos de forma simples e fácil.
+A página recebe os dados dos locatários, via formulário, e envia para a equipe de vendas da Rentcars.
 
 [Visitar site]()
 
 ### Lista com as funcionalidades:
 
-- [x]
-- [x]
-- [x]
 - [x] Implementação da LGPD;
 
 ## 🔧 Instalação
@@ -55,8 +55,10 @@ E com as bibliotecas:
 
 - [ ] implementar lazyload;
 - [ ] implementar tema light / dark;
-- [ ] ;
-- [ ] ;
+- [ ] Coleta de dados via formulário para analise de perfil dos clientes;
+- [ ] lista de carros para compra ou aluga;
+- [ ] Localização das lojas;
+- [ ] contato via whastapp;
 
 ## ✒️ Autor
 
