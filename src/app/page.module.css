@@ -1,3 +1,91 @@
+#main_home {
+  background-image: url('/img/imgrentcarsfullhome.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
 #main_home h2 {
-  font-size: 3rem;
+  font-size: 4rem;
+  text-align: center;
+  color: var(--primary_color);
+  max-width: 900px;
+  background-color: #0000006b;
+}
+#main_home h3 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary_color);
+  max-width: 900px;
+  background-color: #0000006b;
+  margin: 10px 0;
+}
+#main_home label {
+  font-size: 1.6rem;
+  color: var(--text_color);
+}
+#main_home .form_home {
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: var(--secondary_color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 10px;
+}
+#main_home .form_home div p {
+  font-size: 1.6rem;
+  color: var(--text_color);
+  width: 100%;
+  margin: 5px 0;
+}
+#main_home .form_home input,
+#main_home .form_home select {
+  font-size: 1.6rem;
+  padding: 8px 5px;
+  border-radius: 5px;
+  border: 1px solid var(--secondary_color);
+}
+#main_home .form_home .retira input{
+  width: 100%;
+}
+#main_home .form_home .date{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+#main_home .form_home .date input{
+  width: 150px;
+}
+#main_home .form_home .date select{
+  width: 100px;
+  margin-left: 10px;
+}
+#main_home .form_home .residence {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#main_home .form_home .residence div{
+  width: 100%;
+}
+#main_home .form_home .residence select{
+  width: 100%;
+}
+#main_home .form_home .residence button{
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: var(--bg_button);
+  color: var(--primary_color);
+  font-size: 2rem;
+  padding: 5px 40px;
 }
