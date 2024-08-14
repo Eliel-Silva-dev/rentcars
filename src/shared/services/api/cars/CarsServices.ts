@@ -20,5 +20,35 @@ type TCarrosComTotalCount = {
   totalCount: number;
 };
 
+const getAllCars = async (
+  page = 1,
+  id = '',
+  filter = '',
+): Promise<TCarrosComTotalCount | Error> => {
+  try {
+    const urlRelativa = `/cars?_page=${page}&_limit=${Environment.LIMITE_LINHAS_API}&nomeCarro_like=${filter}&id_like=${id}`;
 
-export {};
+    const { data, headers } = await Api.get(urlRelativa);
+
+    if (data) {
+      return {
+        data,
+        totalCount: Number(
+          headers['x-total-count'] || Environment.LIMITE_LINHAS_API,
+        ),
+      };
+    }
+
+    return new Error('Erro ao consultar os registro');
+  } catch (error) {
+    console.error(error);
+
+    return new Error(
+      (error as { message: string }).message ||
+        'Erro ao consultar os registros',
+    );
+  }
+};
+
+
+export { getAllCars };
