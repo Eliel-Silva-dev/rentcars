@@ -68,15 +68,17 @@ const getCarsById = async (id: string): Promise<IDetalheCarros | Error> => {
   }
 };
 
-const createCars = async (dados: Omit<IDetalheCarros, 'id'>): Promise<string | Error> => {
+const createCars = async (
+  dados: Omit<IDetalheCarros, 'id'>,
+): Promise<string | Error> => {
   try {
-    const {data} = await Api.post<IDetalheCarros>('/cars', dados);
+    const { data } = await Api.post<IDetalheCarros>('/cars', dados);
 
     if (data) {
       return data.id;
     }
 
-    return new Error('Erro ao criar o registro')
+    return new Error('Erro ao criar o registro');
   } catch (error) {
     console.error(error);
 
@@ -86,8 +88,12 @@ const createCars = async (dados: Omit<IDetalheCarros, 'id'>): Promise<string | E
   }
 };
 
-const updateCarsById = async (): Promise<> => {
+const updateCarsById = async (
+  id: string,
+  dados: IDetalheCarros,
+): Promise<void | Error> => {
   try {
+    await Api.put(`/cars?${id}`, dados);
   } catch (error) {
     console.error(error);
 
