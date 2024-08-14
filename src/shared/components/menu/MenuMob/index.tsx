@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import style from './style.min.module.css';
 
 import Link from 'next/link';
-import PlusRec from '@/components/PlusRec';
+import PlusRec from '@/shared/components/PlusRec';
 
 const MenuDesk = () => {
   const hamburguerActive = () => {
@@ -38,7 +38,10 @@ const MenuDesk = () => {
       <div id="masc" className={style.masc}></div>
       <ul id="links" className={style.link_container}>
         <li>
-          <Link href={'/'}></Link>
+          <Link href={'/'}>Inicio</Link>
+        </li>
+        <li>
+          <Link href={'/about'}>Sobre</Link>
         </li>
         <li id={style.plus}>
           <PlusRec />

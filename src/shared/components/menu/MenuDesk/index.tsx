@@ -6,7 +6,10 @@ const MenuDesk = () => {
   return (
     <ul className={style.menu_desk}>
       <li>
-        <Link href={'/'}></Link>
+        <Link href={'/'}>Inicio</Link>
+      </li>
+      <li>
+        <Link href={'/about'}>Sobre</Link>
       </li>
     </ul>
   );
