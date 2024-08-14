@@ -103,8 +103,9 @@ const updateCarsById = async (
   }
 };
 
-const deleteCarsById = async (): Promise<> => {
+const deleteCarsById = async (id: string): Promise<void | Error> => {
   try {
+    await Api.delete(`/cars?${id}`);
   } catch (error) {
     console.error(error);
 
