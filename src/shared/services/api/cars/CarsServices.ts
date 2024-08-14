@@ -68,4 +68,44 @@ const getCarsById = async (id: string): Promise<IDetalheCarros | Error> => {
   }
 };
 
-export { getAllCars, getCarsById };
+const createCars = async (dados: Omit<IDetalheCarros, 'id'>): Promise<string | Error> => {
+  try {
+    const {data} = await Api.post<IDetalheCarros>('/cars', dados);
+
+    if (data) {
+      return data.id;
+    }
+
+    return new Error('Erro ao criar o registro')
+  } catch (error) {
+    console.error(error);
+
+    return new Error(
+      (error as { message: string }).message || 'Erro ao criar o registro',
+    );
+  }
+};
+
+const updateCarsById = async (): Promise<> => {
+  try {
+  } catch (error) {
+    console.error(error);
+
+    return new Error(
+      (error as { message: string }).message || 'Erro ao atualizar o registro',
+    );
+  }
+};
+
+const deleteCarsById = async (): Promise<> => {
+  try {
+  } catch (error) {
+    console.error(error);
+
+    return new Error(
+      (error as { message: string }).message || 'Erro ao apagar o registro',
+    );
+  }
+};
+
+export { getAllCars, getCarsById, createCars, updateCarsById, deleteCarsById };
