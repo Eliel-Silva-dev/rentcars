@@ -47,9 +47,12 @@ Ferramentas usadas para criar o projeto:
 
 E com as bibliotecas:
 
+- [yup](https://www.npmjs.com/package/yup)
+- [axios](https://axios-http.com/ptbr/docs/intro)
 - [eslint](https://eslint.org/)
 - [prettier](https://prettier.io/)
 - [react-icons](https://react-icons.github.io/react-icons/)
+- [json-server](https://www.npmjs.com/package/json-server)
 
 ## Próximos passos
 
