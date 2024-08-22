@@ -1,7 +1,7 @@
 import style from './style.min.module.css';
 
 const TermsUse = () => {
-  const nameSiteTerms = 'Mario js';
+  const nameSiteTerms = 'Rent cars';
   return (
     <main className={style.termsUse}>
       <section className={style.terms}>
